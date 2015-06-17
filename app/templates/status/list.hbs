@@ -1,13 +1,10 @@
 <article>
     <section>
-    {{#each status in model}}
         <ul class="list-group">
-            <li class="list-group-item">{{status.department.name}}</li>
-            <li class="list-group-item">{{status.department.contact.name}}</li>
-            <li class="list-group-item">{{status.message}}</li>
-            <li class="list-group-item">{{status.state}}</li>
+            {{#each status in model}}
+                {{#link-to 'status.detail' status.id}}Status #{{status.id}}{{/link-to}}
+            {{/each}}
         </ul>
-    {{/each}}
     </section>
 </article>
 {{outlet}}
