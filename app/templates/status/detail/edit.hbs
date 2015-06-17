@@ -16,5 +16,6 @@
             <label {{bind-attr for="view.state.elementId"}}>State</label>
             {{input type="text" value=model.state viewName="state" class="form-control"}}
         </div>
+        <button {{action "save" target="controller"}} class="btn btn-primary col-md-12">Save</button>
     </form>
 </section>
