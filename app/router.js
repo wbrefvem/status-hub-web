@@ -2,10 +2,11 @@ import Ember from 'ember';
 import config from './config/environment';
 
 var Router = Ember.Router.extend({
-  location: config.locationType
+  location: config.locationType,
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' });
   this.resource('status', function() {
     this.route('list');
     this.route('detail', { path: ':status_id' }, function() {
