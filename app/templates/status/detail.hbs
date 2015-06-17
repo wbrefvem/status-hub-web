@@ -1,0 +1,12 @@
+<article>
+    <section>
+        <ul class="list-group">
+            <li class="list-group-item">{{model.department.name}}</li>
+            <li class="list-group-item">{{model.department.contact.name}}</li>
+            <li class="list-group-item">{{model.message}}</li>
+            <li class="list-group-item">{{model.state}}</li>
+            <li class="list-group-item">{{#link-to 'status.detail.edit' model.id}}edit{{/link-to}}</li>
+        </ul>
+    </section>
+    {{outlet}}
+</article>
