@@ -1,21 +1,42 @@
-<section>
-    <form>
+<section class="row">
+    <form class="form-horizontal">
         <div class="form-group">
-            <label {{bind-attr for="view.departmentName.elementId"}}>Department</label>
-            {{input type="text" value=model.department.name viewName="departmentName" class="form-control"}}
+            <label {{bind-attr for="view.tile.elementId"}} class="control-label col-md-3">Title</label>
+            <div class="col-md-6">
+                {{input type="text" value=model.title viewName="title" class="form-control"}}
+            </div>
         </div>
         <div class="form-group">
-            <label {{bind-attr for="view.contactName.elementId"}}>Contact</label>
-            {{input type="text" value=model.department.contact.name viewName="contactName" class="form-control"}}
+            <label {{bind-attr for="view.description.elementId"}} class="control-label col-md-3">Description</label>
+             <div class="col-md-6">
+                {{input type="text" value=model.description viewName="description" class="form-control"}}
+            </div>
         </div>
         <div class="form-group">
-            <label {{bind-attr for="view.message.elementId"}}>Message</label>
-            {{input type="text" value=model.message viewName="message" class="form-control"}}
+            <label {{bind-attr for="view.startDate.elementId"}} class="control-label col-md-3">Start Date</label>
+            <div class="col-md-6">
+                {{input value=model.startDate viewName="startDate" class="form-control"}}
+            </div>
         </div>
         <div class="form-group">
-            <label {{bind-attr for="view.state.elementId"}}>State</label>
-            {{input type="text" value=model.state viewName="state" class="form-control"}}
+            <label {{bind-attr for="view.startTime.elementId"}} class="control-label col-md-3">Start Time</label>
+            <div class="col-md-6">
+                {{input value=controllers.status/detail.startTime viewName=startTime class="form-control"}}
+            </div>
         </div>
-        <button {{action "save" target="controller"}} class="btn btn-primary col-md-12">Save</button>
+        <div class="form-group">
+            <label {{bind-attr for="view.endDate.elementId"}} class="control-label col-md-3">End Date</label>
+             <div class="col-md-6">
+                {{input value=model.endDate viewName="endDate" class="form-control"}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label {{bind-attr for="view.endTime.elementId"}} class="control-label col-md-3">End Time</label>
+            <div class="col-md-6">
+                {{input value=model.endTime viewName="endTime" class="form-control"}}
+            </div>
+        </div>
+        {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData' class="col-md-offset-3 col-md-3"}}
+        {{#link-to 'status.detail' model.id}}<button class="btn btn-danger col-md-3">Cancel</button>{{/link-to}}
     </form>
 </section>

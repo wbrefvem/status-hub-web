@@ -273,3 +273,6 @@ button:active, .button:active {
 border:0;
 box-shadow:none;
 }
+.pointed-at {
+	cursor: pointer;
+}

@@ -19,5 +19,6 @@ var app = new EmberApp();
 
 app.import('bower_components/bootswatch-dist/js/bootstrap.js');
 app.import('bower_components/bootswatch-dist/css/bootstrap.css');
+app.import('bower_components/momentjs/moment.js');
 
 module.exports = app.toTree();

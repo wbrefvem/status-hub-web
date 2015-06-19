@@ -14,20 +14,6 @@ Router.map(function() {
       this.route('delete');
     });
   });
-  this.route('contact', function() {
-    this.route('list');
-    this.route('detail', { path: ':contact_id' }, function() {
-      this.route('edit');
-      this.route('detail');
-    });
-  });
-  this.route('department', function() {
-    this.route('list');
-    this.route('detail', { path: ':department_id' }, function() {
-      this.route('edit');
-      this.route('detail');
-    });
-  });
 });
 
 export default Router;
