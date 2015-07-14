@@ -8,11 +8,12 @@
                         <div class="row">
                             <div class="menuclose">
                             <button class="button-secondary pure-button pure-button-active">
-                                        <div id="slideToggle2">
+                                        <div id="menumove">
                                             &#10006;
                                         </div>
                                 </button>
                                 </div>
+                            <div id="white"><div class="fancy"></div></div>
                                 <ul class="col-md-1" style="clear:both; margin-top:-5px;">
                                 <li><b>View</b></li>
                                 <li><a href="#">Active</a></li>
@@ -38,8 +39,6 @@
                     {{#each model as |status|}}
                     <li class="list-group-item pointed-at" {{action 'detail' status}}>{{status.title}} #{{status.id}}</li>
                     {{/each}}
-                    <li class="list-group-item pointed-at">Filler</li>
-                    <li class="list-group-item pointed-at">Filler</li>
                     <li class="list-group-item pointed-at">Filler</li>
                     <li class="list-group-item pointed-at">Filler</li>
                     <li class="list-group-item pointed-at">Filler</li>
@@ -74,8 +73,14 @@
 </div>
 
 <script type="text/javascript">
-    $("#slideToggle2").click(function(){
+    $('.menu').toggle(1);
+    $("#menumove").click(function(){
     $('.menu').toggle("left");
+    document.getElementbyId(".fancy").style.display="fixed";
+    });
+    $("#white").click(function(){
+    $('.menu').toggle("right");
+    document.getElementbyId(".fancy").style.display="none";
     });
 </script>
 {{outlet}}
