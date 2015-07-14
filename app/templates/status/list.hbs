@@ -1,10 +1,81 @@
-<article>
-    <section>
-        <ul class="list-group col-md-offset-3 col-md-6">
-            {{#each model as |status|}}
-                <li class="list-group-item pointed-at" {{!-- {{action 'detail' status}} --}}>{{#link-to 'status.detail' status.id}}{{status.title}} #{{status.id}}{{/link-to}}</li>
-            {{/each}}
-        </ul>
-    </section>
-</article>
+<div class="space">
+    <article>
+        <section>
+            <div class="disappear">
+
+                <div class="menu">
+                    <div class="centerit">
+                        <div class="row">
+                            <div class="menuclose">
+                            <button class="button-secondary pure-button pure-button-active">
+                                        <div id="slideToggle2">
+                                            &#10006;
+                                        </div>
+                                </button>
+                                </div>
+                                <ul class="col-md-1" style="clear:both; margin-top:-5px;">
+                                <li><b>View</b></li>
+                                <li><a href="#">Active</a></li>
+                                <li><a href="#">Archives</a></li>
+                                <li><a href="#">Cancelled</a></li>
+                                <li><a href="#">Postponed</a></li>
+                                <li><a href="#">Etc.</a></li>
+                            </ul>
+                            <ul class="col-md-1">
+                                <li><b>Sort By</b></li>
+                                <li><a href="#">A-Z</a></li>
+                                <li><a href="#">End Date</a></li>
+                                <li><a href="#">Project Platform</a></li>
+                                <li><a href="#">Start Date</a></li> 
+                                <li><a href="#">Etc.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-group col-md-offset-3 col-md-6">
+                <strong>
+                    {{#each model as |status|}}
+                    <li class="list-group-item pointed-at" {{action 'detail' status}}>{{status.title}} #{{status.id}}</li>
+                    {{/each}}
+                    <li class="list-group-item pointed-at">Filler</li>
+                    <li class="list-group-item pointed-at">Filler</li>
+                    <li class="list-group-item pointed-at">Filler</li>
+                    <li class="list-group-item pointed-at">Filler</li>
+                    <li class="list-group-item pointed-at">Filler</li>
+                    <li class="list-group-item pointed-at">Filler</li>
+                </strong>
+            </ul>
+            <div class="disappear2">
+                <div class="col-md-2 col-md-offset-1 list-group">
+                    <div class="sidebar">
+                        <h3 style="margin-bottom: 4px;"><b>Quick Links</b></h3>
+                        <b>View</b>
+                        <ul>
+                            <li><a href="#">Active</a></li>
+                            <li><a href="#">Archives</a></li>
+                            <li><a href="#">Cancelled</a></li>
+                            <li><a href="#">Postponed</a></li>          
+                            <li><a href="#">Etc.</a></li>
+                        </ul>
+                        <b>Sort By</b>
+                        <ul>
+                            <li><a href="#">A-Z</a></li>
+                            <li><a href="#">End Date</a></li>
+                            <li><a href="#">Project Platform</a></li>
+                            <li><a href="#">Start Date</a></li>         
+                            <li><a href="#">Etc.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</div>
+
+<script type="text/javascript">
+    $("#slideToggle2").click(function(){
+    $('.menu').toggle("left");
+    });
+</script>
 {{outlet}}

@@ -26,10 +26,11 @@ form li {
  	display: block;
  	position: relative;
 	max-width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 100px;
 	vertical-align: middle;
 	overflow: hidden;
 	text-align:center;
+	color: blue;
 }
 form input, form select {
  	width:90%;
@@ -124,7 +125,7 @@ footer p{
 }
  button, .button{
  	display: inline-block;
-	padding: .5em 1em;
+	padding: .1em 1em;
 	margin:0 auto 1em;
 	border: 1px solid transparent;
 	border-radius: 4px;
