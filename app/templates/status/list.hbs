@@ -6,24 +6,20 @@
                 <div class="menu">
                     <div class="centerit">
                         <div class="row">
-                            <div class="menuclose">
-                            <button class="button-secondary pure-button pure-button-active">
-                                        <div id="menumove">
-                                            &#10006;
-                                        </div>
+                            <div id="menuhide" class="menuclose">
+                                <button class="button-secondary pure-button pure-button-active">
+                                        &#10006;
                                 </button>
-                                </div>
-                            <div id="white"><div class="fancy"></div></div>
-                                <ul class="col-md-1" style="clear:both; margin-top:-5px;">
-                                <li><b>View</b></li>
+                            </div>
+
+                            <ul class="col-md-1" style="clear:both; margin-top:-5px;">
+                                <li><h3>View</h3></li>
                                 <li><a href="#">Active</a></li>
                                 <li><a href="#">Archives</a></li>
                                 <li><a href="#">Cancelled</a></li>
                                 <li><a href="#">Postponed</a></li>
                                 <li><a href="#">Etc.</a></li>
-                            </ul>
-                            <ul class="col-md-1">
-                                <li><b>Sort By</b></li>
+                                <li><h3>Sort By</h3></li>
                                 <li><a href="#">A-Z</a></li>
                                 <li><a href="#">End Date</a></li>
                                 <li><a href="#">Project Platform</a></li>
@@ -33,6 +29,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="white"><div class="fancy"></div></div>
             </div>
             <ul class="list-group col-md-offset-3 col-md-6">
                 <strong>
@@ -71,16 +68,21 @@
         </section>
     </article>
 </div>
-
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
 <script type="text/javascript">
-    $('.menu').toggle(1);
-    $("#menumove").click(function(){
-    $('.menu').toggle("left");
-    document.getElementbyId(".fancy").style.display="fixed";
-    });
-    $("#white").click(function(){
-    $('.menu').toggle("right");
-    document.getElementbyId(".fancy").style.display="none";
-    });
+$('.menu').toggle(1);
+$('.fancy').toggle(1);
+
+$("#menuhide").click(function(){
+$('.menu').hide();
+$('.fancy').hide();
+});
+
+$("#white").click(function(){
+$('.menu').hide();
+$('.fancy').hide();
+});
+
 </script>
 {{outlet}}
