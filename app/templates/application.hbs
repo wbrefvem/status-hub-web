@@ -1,24 +1,6 @@
 <header>
-	<div class="disappear">
-	<div class="menuopen">
-	<div id="slideToggle">
-	<button class="button-secondary pure-button pure-button-active">
-		&#9776;
-	</button>
-	</div>
-	</div>
-	</div>
    <h1 id="title" class="pointed-at" {{action 'home'}}>Status Hub</h1>
 </header>
 <div class="container">
 {{outlet}}
 </div>
-<link rel="stylesheet" href="jquery-ui.min.css">
-<script src="external/jquery/jquery.js"></script>
-<script src="jquery-ui.min.js"></script>
-<script type="text/javascript">
-    $("#slideToggle").click(function(){
-    $('.menu').show();
-    $('.fancy').show();
-    });
-</script>

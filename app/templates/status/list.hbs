@@ -2,24 +2,27 @@
     <article>
         <section>
             <div class="disappear">
-
+                <div class="menuopen">
+                        <button class="button-secondary pure-button pure-button-active">
+                            &#9776;
+                        </button>
+                </div>
+            </div>
+            <div class="disappear">
                 <div class="menu">
-                    <div class="centerit">
                         <div class="row">
-                            <div id="menuhide" class="menuclose">
+                            <div class="menuclose">
                                 <button class="button-secondary pure-button pure-button-active">
-                                        &#10006;
+                                    &#10006;
                                 </button>
-                            </div>
-
-                            <ul class="col-md-1" style="clear:both; margin-top:-5px;">
-                                <li><h3>View</h3></li>
+                            <ul class="col-md-1">
+                                <h3>View</h3>
                                 <li><a href="#">Active</a></li>
                                 <li><a href="#">Archives</a></li>
                                 <li><a href="#">Cancelled</a></li>
                                 <li><a href="#">Postponed</a></li>
                                 <li><a href="#">Etc.</a></li>
-                                <li><h3>Sort By</h3></li>
+                                <h3>Sort By</h3>
                                 <li><a href="#">A-Z</a></li>
                                 <li><a href="#">End Date</a></li>
                                 <li><a href="#">Project Platform</a></li>
@@ -29,8 +32,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="white"><div class="fancy"></div></div>
+                <div class="fancy"></div>
             </div>
+            <div class="temp">
             <ul class="list-group col-md-offset-3 col-md-6">
                 <strong>
                     {{#each model as |status|}}
@@ -42,6 +46,7 @@
                     <li class="list-group-item pointed-at">Filler</li>
                 </strong>
             </ul>
+            </div>
             <div class="disappear2">
                 <div class="col-md-2 col-md-offset-1 list-group">
                     <div class="sidebar">
@@ -68,21 +73,22 @@
         </section>
     </article>
 </div>
-<script src="external/jquery/jquery.js"></script>
-<script src="jquery-ui.min.js"></script>
 <script type="text/javascript">
-$('.menu').toggle(1);
-$('.fancy').toggle(1);
+    $('.menu').toggle(1);
+    $('.fancy').toggle(1);
 
-$("#menuhide").click(function(){
-$('.menu').hide();
-$('.fancy').hide();
-});
+    $(".menuclose").click(function(){
+    $('.menu').hide();
+    $('.fancy').hide();
+    });
 
-$("#white").click(function(){
-$('.menu').hide();
-$('.fancy').hide();
-});
-
+    $(".fancy").click(function(){
+    $('.menu').hide();
+    $('.fancy').hide();
+    });
+    $(".menuopen").click(function(){
+    $('.menu').show();
+    $('.fancy').show();
+    });
 </script>
 {{outlet}}
