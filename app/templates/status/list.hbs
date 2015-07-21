@@ -2,7 +2,7 @@
     <section>
         <ul class="list-group col-md-offset-3 col-md-6">
             {{#each model as |status|}}
-                <li class="list-group-item pointed-at" {{action 'detail' status}}>{{status.title}} #{{status.id}}</li>
+                <li class="list-group-item pointed-at" {{!-- {{action 'detail' status}} --}}>{{#link-to 'status.detail' status.id}}{{status.title}} #{{status.id}}{{/link-to}}</li>
             {{/each}}
         </ul>
     </section>
