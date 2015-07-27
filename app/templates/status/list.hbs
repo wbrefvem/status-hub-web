@@ -1,94 +1,83 @@
-<div class="space">
     <article>
-        <section>
-            <div class="disappear">
-                <div class="menuopen">
-                        <button class="button-secondary pure-button pure-button-active">
-                            &#9776;
-                        </button>
-                </div>
+    <section>
+        <div class="disappear">
+            <div class="menuopen">
+                &#9776;
             </div>
-            <div class="disappear">
-                <div class="menu">
-                        <div class="row">
-                            <div class="menuclose">
-                                <button class="button-secondary pure-button pure-button-active">
-                                    &#10006;
-                                </button>
-                            <ul class="col-md-1">
-                                <h3>View</h3>
-                                <li><a href="#">Active</a></li>
-                                <li><a href="#">Archives</a></li>
-                                <li><a href="#">Cancelled</a></li>
-                                <li><a href="#">Postponed</a></li>
-                                <li><a href="#">Etc.</a></li>
-                                <h3>Sort By</h3>
-                                <li><a href="#">A-Z</a></li>
-                                <li><a href="#">End Date</a></li>
-                                <li><a href="#">Project Platform</a></li>
-                                <li><a href="#">Start Date</a></li> 
-                                <li><a href="#">Etc.</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="fancy"></div>
-            </div>
-            <div class="temp">
-            <ul class="list-group col-md-offset-3 col-md-6">
-                <strong>
-                    {{#each model as |status|}}
-                    <li class="list-group-item pointed-at" {{action 'detail' status}}>{{status.title}} #{{status.id}}</li>
-                    {{/each}}
-                    <li class="list-group-item pointed-at">Filler</li>
-                    <li class="list-group-item pointed-at">Filler</li>
-                    <li class="list-group-item pointed-at">Filler</li>
-                    <li class="list-group-item pointed-at">Filler</li>
-                </strong>
-            </ul>
-            </div>
-            <div class="disappear2">
-                <div class="col-md-2 col-md-offset-1 list-group">
-                    <div class="sidebar">
-                        <h3 style="margin-bottom: 4px;"><b>Quick Links</b></h3>
-                        <b>View</b>
+        </div>
+        <div class="disappear">
+            <div class="menu">
+                <div class="row">
+                    <div class="menuclose">
+                        &#10006;
                         <ul>
+                            <h3>View</h3>
                             <li><a href="#">Active</a></li>
                             <li><a href="#">Archives</a></li>
                             <li><a href="#">Cancelled</a></li>
-                            <li><a href="#">Postponed</a></li>          
+                            <li><a href="#">Postponed</a></li>
                             <li><a href="#">Etc.</a></li>
-                        </ul>
-                        <b>Sort By</b>
-                        <ul>
+                            <h3>Sort By</h3>
                             <li><a href="#">A-Z</a></li>
                             <li><a href="#">End Date</a></li>
                             <li><a href="#">Project Platform</a></li>
-                            <li><a href="#">Start Date</a></li>         
+                            <li><a href="#">Start Date</a></li> 
                             <li><a href="#">Etc.</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section>
-    </article>
-</div>
+            <div class="fancy"></div>
+        </div>
+        <ul class="project-list">
+            <strong>
+                {{#each model as |status|}}
+                <li class="list-group-item pointed-at" {{action 'detail' status}}>{{status.title}} #{{status.id}}</li>
+                {{/each}}
+                <li class="list-group-item pointed-at">Filler</li>
+                <li class="list-group-item pointed-at">Filler</li>
+                <li class="list-group-item pointed-at">Filler</li>
+                <li class="list-group-item pointed-at">Filler</li>
+            </strong>
+        </ul>
+        <div class="disappear2">
+                <div class="sidebar">
+                    <h3><b>Quick Links</b></h3>
+                    <b>View</b>
+                    <ul>
+                        <li><a href="#">Active</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="#">Cancelled</a></li>
+                        <li><a href="#">Postponed</a></li>          
+                        <li><a href="#">Etc.</a></li>
+                    </ul>
+                    <b>Sort By</b>
+                    <ul>
+                        <li><a href="#">A-Z</a></li>
+                        <li><a href="#">End Date</a></li>
+                        <li><a href="#">Start Date</a></li>         
+                        <li><a href="#">Etc.</a></li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+</article>
 <script type="text/javascript">
     $('.menu').toggle(1);
     $('.fancy').toggle(1);
 
     $(".menuclose").click(function(){
-    $('.menu').hide();
-    $('.fancy').hide();
+    $('.menu').toggle();
+    $('.fancy').toggle();
     });
 
     $(".fancy").click(function(){
-    $('.menu').hide();
-    $('.fancy').hide();
+    $('.menu').toggle();
+    $('.fancy').toggle();
     });
     $(".menuopen").click(function(){
-    $('.menu').show();
-    $('.fancy').show();
+    $('.menu').toggle();
+    $('.fancy').toggle();
     });
 </script>
 {{outlet}}
