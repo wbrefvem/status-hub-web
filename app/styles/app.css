@@ -1,7 +1,8 @@
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
 body{
  	font-size:100%/1.5;
- 	font-family: 'Lato', sans-serif;
+ 	font-family: 'News Cycle', sans-serif;
  	color:#515151;
  	background:#ECECEC;
  	margin:0;
@@ -33,6 +34,7 @@ form li {
 	overflow: hidden;
 	text-align:center;
 	color: blue;
+	font-weight:900;
 }
 form input, form select {
  	width:90%;
@@ -46,7 +48,7 @@ form input, form select {
 	box-shadow: inset 0 -2px #dedede;
 }
 header {
-	background:#3c61a5;
+	background:#3366CC;
 	padding:1em;
 	position: relative;
 	z-index: 1;
@@ -56,6 +58,11 @@ header {
 	-webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 	box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 }
+#title{
+	font-weight:normal;
+	color:#FFFFFF;
+}
+@media ()
 h1{
  	font-size: 2em;
  	font-weight:normal;
@@ -215,16 +222,7 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 }
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
@@ -285,7 +283,7 @@ button:active, .button:active {
 	border-radius:10px;
 	padding: 10px 5px;
 	position:fixed;
-	right:15px;
+	left:2.5%;
 	top:150px;
 }
 .sidebar h3{
@@ -311,8 +309,8 @@ button:active, .button:active {
 	background-color:#FCFCFC;
 }
 .project-list li:last-child{
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 7.5px;
+	border-bottom-left-radius: 7.5px;
 	background-color:#FCFCFC;
 }
 @media (max-width: 990px){
@@ -324,16 +322,65 @@ button:active, .button:active {
 	}
 	.menuopen{
 		font-size: 25px;
-		background-color:#FCFCFC;
+		background-color:#6699FF;
 		padding: 5px;
 		width:32px;
 		line-height: 27.5px;
 		font-weight: bold;
-		position:absolute;
+		position:fixed;
+		top:100px;
+		left:0;
+		border-bottom-right-radius:5px;
+	}
+	.menuclose{
+		margin: 15px 20px 0px 20px;
+	}
+	.menu{
+		background: #3c61a5;
+		position:fixed;
+		top:0;
+		left:0;
+		z-index: 3;
+		color:white;
+		min-height: 100%;
+		width: 200px;
+	}
+	.menu ul{
+		clear:both;	
+	}
+	.fancy{
+		height:100%;
+		width:100%;
+		position:fixed;
+		z-index: 2;
+	}
+	.menu h3{
+		margin-top:1em;
+	}
+	.menu ul li{
+		line-height: 1.1em;
 	}
 }
 @media (min-width:990px){
-	.menuopen{
+	.disappear{
 		display:none;
 	}
+}
+.detail{
+	border-radius:10px;
+	padding: 10px;
+	width:85%;
+	background:#FCFCFC;
+	margin: 0 auto;
+}
+.pencil{
+	display:none;
+	float:right;
+	margin-right:10px;
+}
+.project-list li:hover{
+	display: static;
+}
+.centerit{
+	margin:0 auto;
 }
