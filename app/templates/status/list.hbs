@@ -5,23 +5,25 @@
                 &#9776;
             </div>
             <div class="menu">
-                <div class="row">
-                    <div class="menuclose">
-                        <span style="float:right;">&#10006;</span>
-                        <ul style="clear:both;">
-                            <h3>View</h3>
-                            <li><a href="#">Active</a></li>
-                            <li><a href="#">Archives</a></li>
-                            <li><a href="#">Cancelled</a></li>
-                            <li><a href="#">Postponed</a></li>
-                            <li><a href="#">Etc.</a></li>
-                            <h3>Sort By</h3>
-                            <li><a href="#">A-Z</a></li>
-                            <li><a href="#">End Date</a></li>
-                            <li><a href="#">Start Date</a></li> 
-                            <li><a href="#">Etc.</a></li>
-                        </ul>
-                    </div>
+                <div class="menuclose">
+                    &#10006;
+                </div>
+                <div class="holder">
+                    <ul>
+                        <h3>View</h3>
+                        <li><a href="#">Active</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="#">Cancelled</a></li>
+                        <li><a href="#">Postponed</a></li>
+                        <li><a href="#">Etc.</a></li>
+                    </ul>
+                    <ul>
+                        <h3>Sort By</h3>
+                        <li><a href="#">A-Z</a></li>
+                        <li><a href="#">End Date</a></li>
+                        <li><a href="#">Start Date</a></li> 
+                        <li><a href="#">Etc.</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="fancy"></div>
@@ -30,9 +32,9 @@
             <strong>
                 {{#each model as |status|}}
                 <li class="list-group-item" {{action 'detail' status}}>{{status.title}} #{{status.id}}
-                <div class="pencil">
-                {{#link-to 'status.detail.edit' model.id}}&#9998;{{/link-to}}
-                </div>
+                    <div class="pencil">
+                        {{#link-to 'status.detail.edit' model.id}}&#9998;{{/link-to}}
+                    </div>
 
                 </li>
                 {{/each}}
@@ -43,44 +45,52 @@
             </strong>
         </ul>
         <div class="disappear2">
-                <div class="sidebar">
-                    <h3><b>Quick Links</b></h3>
-                    <b>View</b>
-                    <ul>
-                        <li><a href="#">Active</a></li>
-                        <li><a href="#">Archives</a></li>
-                        <li><a href="#">Cancelled</a></li>
-                        <li><a href="#">Postponed</a></li>          
-                        <li><a href="#">Etc.</a></li>
-                    </ul>
-                    <b>Sort By</b>
-                    <ul>
-                        <li><a href="#">A-Z</a></li>
-                        <li><a href="#">End Date</a></li>
-                        <li><a href="#">Start Date</a></li>         
-                        <li><a href="#">Etc.</a></li>
-                    </ul>
-                </div>
+            <div class="sidebar">
+                <h3><b>Quick Links</b></h3>
+                <b>View</b>
+                <ul>
+                    <li><a href="#">Active</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#">Cancelled</a></li>
+                    <li><a href="#">Postponed</a></li>          
+                    <li><a href="#">Etc.</a></li>
+                </ul>
+                <b>Sort By</b>
+                <ul>
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">End Date</a></li>
+                    <li><a href="#">Start Date</a></li>         
+                    <li><a href="#">Etc.</a></li>
+                </ul>
+            </div>
         </div>
     </section>
 </article>
 <script>
+    $(document).ready(function(){
+
+    var menubutton = null;
+
     $('.menu').toggle(1);
     $('.fancy').toggle(1);
 
     $(".menuclose").click(function(){
-        $('.menu').slideToggle();
-        $('.fancy').slideToggle();
-    });
-
-    $(".fancy").click(function(){
-        $('.menu').slideToggle();
-        $('.fancy').slideToggle();
+    $('.menu').slideUp();
+    $('.fancy').slideToggle();
+    menubutton=0;
+    if(menubutton){
+    $('.menuopen').css("display", "none");
+    }
     });
 
     $(".menuopen").click(function(){
-        $('.menu').slideToggle();
-        $('.fancy').slideToggle();
+    $('.menu').slideDown();
+    $('.fancy').slideToggle();
+    menubutton=" ";
+    if(menubutton){
+    $('.menuopen').css("display", "none");
+    }
+    });
     });
 </script>
 {{outlet}}

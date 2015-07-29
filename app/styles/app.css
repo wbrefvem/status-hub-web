@@ -327,35 +327,45 @@ button:active, .button:active {
 		width:32px;
 		line-height: 27.5px;
 		font-weight: bold;
-		position:fixed;
-		top:100px;
-		left:0;
+		position:absolute;
+		bottom:100px;
+		left:10px;
 		border-bottom-right-radius:5px;
+		border-bottom-left-radius: 5px;
+	}
+	.menuopen:hover{
+		cursor:pointer;
 	}
 	.menuclose{
 		margin: 15px 20px 0px 20px;
+		padding:10px;
+		position:relative;
+	}
+	.menuclose:hover{
+
+	}
+	.holder{
+		margin: 0 auto;
 	}
 	.menu{
-		background: #3c61a5;
+		background: #6699FF;
 		position:fixed;
-		top:0;
+		top:100px;
 		left:0;
+		width:100%;
 		z-index: 3;
-		color:white;
-		min-height: 100%;
-		width: 200px;
+		margin: 0 auto;
+	}
+	.menu a{
+		color:#0000EE;
 	}
 	.menu ul{
 		clear:both;	
+		display:inline-block;
+		vertical-align: top;
 	}
-	.fancy{
-		height:100%;
-		width:100%;
-		position:fixed;
-		z-index: 2;
-	}
-	.menu h3{
-		margin-top:1em;
+	.menu ul:last-child{
+		margin-left:25%;
 	}
 	.menu ul li{
 		line-height: 1.1em;
