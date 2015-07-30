@@ -324,11 +324,11 @@ button:active, .button:active {
 		font-size: 25px;
 		background-color:#6699FF;
 		padding: 5px;
-		width:32px;
+		width:77.5px;
 		line-height: 27.5px;
 		font-weight: bold;
-		position:absolute;
-		bottom:100px;
+		position:relative;
+		top:-17.5px;
 		left:10px;
 		border-bottom-right-radius:5px;
 		border-bottom-left-radius: 5px;
@@ -336,28 +336,21 @@ button:active, .button:active {
 	.menuopen:hover{
 		cursor:pointer;
 	}
-	.menuclose{
-		margin: 15px 20px 0px 20px;
-		padding:10px;
-		position:relative;
-	}
-	.menuclose:hover{
-
-	}
-	.holder{
-		margin: 0 auto;
-	}
 	.menu{
 		background: #6699FF;
-		position:fixed;
+		position:absolute;
 		top:100px;
 		left:0;
 		width:100%;
 		z-index: 3;
 		margin: 0 auto;
+		height:120px;
 	}
 	.menu a{
-		color:#0000EE;
+		color:#FFFFFF;
+	}
+	.menu a:hover{
+		text-decoration: underline;
 	}
 	.menu ul{
 		clear:both;	
@@ -384,7 +377,6 @@ button:active, .button:active {
 	margin: 0 auto;
 }
 .pencil{
-	display:none;
 	float:right;
 	margin-right:10px;
 }
@@ -393,4 +385,8 @@ button:active, .button:active {
 }
 .centerit{
 	margin:0 auto;
+	vertical-align: middle;
+}
+.space{
+	height:120px;
 }

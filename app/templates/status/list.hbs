@@ -1,14 +1,13 @@
     <article>
     <section>
         <div class="disappear">
+            <div class="space"></div>
             <div class="menuopen">
-                &#9776;
+                &#9776; <span style="font-size:17px;">Sort</span>
             </div>
             <div class="menu">
-                <div class="menuclose">
-                    &#10006;
-                </div>
-                <div class="holder">
+
+                <div class="centerit">
                     <ul>
                         <h3>View</h3>
                         <li><a href="#">Active</a></li>
@@ -29,7 +28,7 @@
             <div class="fancy"></div>
         </div>
         <ul class="project-list">
-            <strong>
+                <strong>
                 {{#each model as |status|}}
                 <li class="list-group-item" {{action 'detail' status}}>{{status.title}} #{{status.id}}
                     <div class="pencil">
@@ -63,33 +62,18 @@
                     <li><a href="#">Etc.</a></li>
                 </ul>
             </div>
-        </div>
-    </section>
+    </div>
+</section>
 </article>
 <script>
     $(document).ready(function(){
 
-    var menubutton = null;
-
     $('.menu').toggle(1);
-    $('.fancy').toggle(1);
-
-    $(".menuclose").click(function(){
-    $('.menu').slideUp();
-    $('.fancy').slideToggle();
-    menubutton=0;
-    if(menubutton){
-    $('.menuopen').css("display", "none");
-    }
-    });
+    $('.space').toggle(1);
 
     $(".menuopen").click(function(){
-    $('.menu').slideDown();
-    $('.fancy').slideToggle();
-    menubutton=" ";
-    if(menubutton){
-    $('.menuopen').css("display", "none");
-    }
+    $('.menu').slideToggle();
+    $('.space').slideToggle();
     });
     });
 </script>
