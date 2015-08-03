@@ -41,8 +41,8 @@
             </div>
             <i><p style="text-indent: 15px;" class="help-block">00:00:00</p></i>
         </div>
-        {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData' class="col-md-offset-3 col-md-3"}}
-        {{#link-to 'status.detail' model.id}}<button class="btn-form btn-danger col-md-3">Cancel</button>{{/link-to}}
+        {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData'}}
+        <div class="cancel">{{#link-to 'status.detail' model.id}}Revert Changes{{/link-to}}</div>
     </form>
     </div>
 </section>
