@@ -28,7 +28,7 @@ label {
 form li {
  	display: block;
  	position: relative;
-	max-width: 100%;
+	width: 100%;
 	margin-bottom: 100px;
 	vertical-align: middle;
 	overflow: hidden;
@@ -351,17 +351,34 @@ button:active, .button:active {
 	}
 	.menu a:hover{
 		text-decoration: underline;
+		opacity: .2;
 	}
 	.menu ul{
-		clear:both;	
 		display:inline-block;
 		vertical-align: top;
 	}
-	.menu ul:last-child{
-		margin-left:25%;
-	}
+	
 	.menu ul li{
 		line-height: 1.1em;
+	}
+}
+@media (min-width: 640px){
+	.menu ul:last-child{
+		float:right;
+		margin-right:25%;
+	}
+	.menu ul:first-child{
+		margin-left:25%;
+		float:left;
+	}
+}
+@media (max-width: 639px){
+	.menu ul:last-child{
+		float:right;
+		margin-right:20%;	}
+	.menu ul:first-child{
+		margin-left:20%;
+		float:left;
 	}
 }
 @media (min-width:990px){
@@ -383,10 +400,20 @@ button:active, .button:active {
 .project-list li:hover{
 	display: static;
 }
-.centerit{
-	margin:0 auto;
-	vertical-align: middle;
-}
 .space{
 	height:120px;
+}
+.col-md-6{
+	text-align: center;
+}
+#container{
+}
+.help-block{
+	position:relative;
+	top:-25px;
+	right:-5%;
+}
+.help-block p{
+	margin:0;
+	padding:0;
 }
