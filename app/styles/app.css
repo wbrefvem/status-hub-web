@@ -7,6 +7,7 @@ body{
  	background:#ECECEC;
  	margin:0;
  	padding:0;
+ 	overflow-x:hidden;
 }
 a {
 	color:#00B4FF;
@@ -25,20 +26,8 @@ li {
 label {
 	/* display:none; wrap inputs in label and remove this */
 }
-form li {
- 	display: block;
- 	position: relative;
-	max-width: 100%;
-	margin-bottom: 100px;
-	vertical-align: middle;
-	overflow: hidden;
-	text-align:center;
-	color: blue;
-	font-weight:900;
-}
 form input, form select {
- 	width:90%;
-	height: 50px;
+ 	height: 50px;
 	margin-bottom: 1em;
 	padding:0.25em 1em;
 	font-size:1.1em;
@@ -57,6 +46,7 @@ header {
 	border-bottom: 0.25em solid #23488C;
 	-webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 	box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
+	width:100%;
 }
 #title{
 	font-weight:normal;
@@ -137,8 +127,10 @@ footer p{
 	margin:0 auto 1em;
 	border: 1px solid transparent;
 	border-radius: 4px;
+	text-align: center;
 	vertical-align: top;
-	width: 600px;
+	max-width: 800px;
+	width:40%;
 	height: 54px;
 	font-size: 1.4em;
 	color: white;
@@ -149,10 +141,8 @@ footer p{
 	-webkit-box-shadow: inset 0 -2px #4C5F1F;
 	box-shadow: inset 0 -2px #4C5F1F;
 	background: #00B800;
+	margin: 30px auto 0 auto;
  }
-.cancel{
-	text-align: right;
-}
 @media only screen and (min-width: 40em) {
 	h1{
 	font-size: 3em;
@@ -391,6 +381,10 @@ button:active, .button:active {
 	background:#FCFCFC;
 	margin: 0 auto;
 }
+.cancel{
+	text-align: right;
+	margin-top:10px;
+}
 .pencil{
 	float:right;
 	margin-right:10px;
@@ -404,4 +398,51 @@ button:active, .button:active {
 .centerit{
 	margin:0 auto;
 	vertical-align: middle;
+}
+label.field{
+	width:80px;
+	text-align:right;
+	float:left;
+	vertical-align: middle;
+	margin-left: -5%;
+	margin-right: 5%;
+	position:relative;
+	top:15px;
+}
+input{
+	width:85%;
+	float:left;
+	margin-right: -5%;
+}
+#container{
+	width:85%;
+	margin:0 auto;
+}
+#container p{
+	clear:both;
+	padding:5px;
+}
+.help-block{
+	left:100px;
+	position:relative;
+	top:-10px;
+	margin-bottom: -20px;
+}
+.help-block:last-child{
+	margin-bottom: 40px;
+}
+@media(max-width: 652px){
+	label.field{
+		margin-bottom:15px;
+		text-align: left;
+	}
+	input{
+		width:90%;
+	}
+	.help-block{
+		left:50px;
+		position: relative;
+		top:-10px;
+		margin-bottom: -20px;
+	}
 }
