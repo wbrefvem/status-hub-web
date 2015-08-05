@@ -13,7 +13,6 @@
                         <li><a href="#">Active</a></li>
                         <li><a href="#">Archives</a></li>
                         <li><a href="#">Cancelled</a></li>
-                        <li><a href="#">Postponed</a></li>
                         <li><a href="#">Etc.</a></li>
                     </ul>
                     <ul>
@@ -31,7 +30,7 @@
                 <strong>
                 {{#each model as |status|}}
                 <li class="list-group-item" {{action 'detail' status}}>{{status.title}} #{{status.id}}
-                    <div class="pencil">
+                    <div title="Edit Status" class="pencil">
                         {{#link-to 'status.detail.edit' model.id}}&#9998;{{/link-to}}
                     </div>
 

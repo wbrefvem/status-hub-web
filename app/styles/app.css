@@ -320,6 +320,7 @@ button:active, .button:active {
 		left:10px;
 		border-bottom-right-radius:5px;
 		border-bottom-left-radius: 5px;
+		color:#000000;
 	}
 	.menuopen:hover{
 		cursor:pointer;
@@ -335,7 +336,7 @@ button:active, .button:active {
 		height:120px;
 	}
 	.menu a{
-		color:#FFFFFF;
+		color:#FCFCFC;
 	}
 	.menu a:hover{
 		text-decoration: underline;
@@ -344,10 +345,15 @@ button:active, .button:active {
 	.menu ul{
 		display:inline-block;
 		vertical-align: top;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	
 	.menu ul li{
 		line-height: 1.1em;
+	}
+	.menu h3{
+		color:#000000;
 	}
 }
 @media (min-width: 640px){
@@ -389,8 +395,11 @@ button:active, .button:active {
 	float:right;
 	margin-right:10px;
 }
+.pencil:hover{
+	text-decoration: underline;
+}
 .project-list li:hover{
-	display: static;
+	cursor: pointer;
 }
 .space{
 	height:120px;

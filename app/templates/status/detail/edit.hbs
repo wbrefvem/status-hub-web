@@ -2,17 +2,31 @@
     <form>
     <div id="container">
         <p><label class="field" for="Title">Title:</label>{{input type="text" value=model.title viewName="title" class="form-control" placeholder="Project Title"}}</p>
+
         <p><label class="field" for="Description">Description:</label>{{input type="text" value=model.description viewName="description" class="form-control" placeholder="Project Description"}}</p>
-        <p><label class="field" for="StartDate">Start Date:</label>{{input value=model.startDate viewName="startDate" class="form-control" placeholder="Start Date"}}</p>
-        <p class="help-block"><i>Format: YYYY-MM-DD</i></p>
+
+        <p><label class="field" for="StartDate">Start Date:</label>{{input value=model.startDate id="datepicker" viewName="startDate" class="form-control" placeholder="Start Date"}}</p>
+            <p class="help-block"><i>Format: MM/DD/YYYY</i></p>
+
         <p><label class="field" for="StartTime">Start Time:</label>{{input value=controllers.status/detail.startTime viewName=startTime class="form-control" placeholder="Start Time"}}</p>
-        <p class="help-block"><i>Format: 00:00:00</i></p>
-        <p><label class="field" for="EndDate">End Date:</label>{{input value=model.endDate viewName="endDate" class="form-control" placeholder="End Date"}}</p>
-        <p class="help-block"><i>Format: YYYY-MM-DD</i></p>
+            <p class="help-block"><i>Format: 00:00:00</i></p>
+        
+        <p><label class="field" for="EndDate">End Date:</label>{{input value=model.endDate id="datepicker2"  viewName="endDate" class="form-control" placeholder="End Date"}}</p>
+            <p class="help-block"><i>Format: MM/DD/YYYY</i></p>
+        
         <p><label class="field" for="EndTime">End Time:</label>{{input value=model.endTime viewName="endTime" class="form-control" placeholder="End Time"}}</p>
-        <p class="help-block"><i>Format: 00:00:00</i></p>
+            <p class="help-block"><i>Format: 00:00:00</i></p>
+        
         <span style="text-align:center;margin:0 auto;">{{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData'}}</span>
+
         <div class="cancel">{{#link-to 'status.detail' model.id}}Revert Changes{{/link-to}}</div>
     </div>
     </form>
 </section>
+
+<script>
+$(function() {
+    $("#datepicker").datepicker();
+    $("#datepicker2").datepicker();
+});
+</script>
