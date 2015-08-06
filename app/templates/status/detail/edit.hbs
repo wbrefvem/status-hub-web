@@ -8,13 +8,13 @@
         <p><label class="field" for="StartDate">Start Date:</label>{{input value=model.startDate id="datepicker" viewName="startDate" class="form-control" placeholder="Start Date"}}</p>
             <p class="help-block"><i>Format: MM/DD/YYYY</i></p>
 
-        <p><label class="field" for="StartTime">Start Time:</label>{{input value=controllers.status/detail.startTime viewName=startTime class="form-control" placeholder="Start Time"}}</p>
+        <p><label class="field" for="StartTime">Start Time:</label>{{input value=controllers.status/detail.startTime viewName=startTime class="form-control" placeholder="Start Time" type="time"}}</p>
             <p class="help-block"><i>Format: 00:00:00</i></p>
         
         <p><label class="field" for="EndDate">End Date:</label>{{input value=model.endDate id="datepicker2"  viewName="endDate" class="form-control" placeholder="End Date"}}</p>
             <p class="help-block"><i>Format: MM/DD/YYYY</i></p>
         
-        <p><label class="field" for="EndTime">End Time:</label>{{input value=model.endTime viewName="endTime" class="form-control" placeholder="End Time"}}</p>
+        <p><label class="field" for="EndTime">End Time:</label>{{input value=model.endTime viewName="endTime" class="form-control" placeholder="End Time" type="time"}}</p>
             <p class="help-block"><i>Format: 00:00:00</i></p>
         
         <span style="text-align:center;margin:0 auto;">{{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData'}}</span>
@@ -28,5 +28,9 @@
 $(function() {
     $("#datepicker").datepicker();
     $("#datepicker2").datepicker();
+});
+$(function() {
+    $("timepicker").timepicker();
+    $("timepicker2").timepicker();
 });
 </script>
