@@ -409,7 +409,7 @@ button:active, .button:active {
 	vertical-align: middle;
 }
 label.field{
-	width:80px;
+	width:83px;
 	text-align:right;
 	float:left;
 	vertical-align: middle;
@@ -454,4 +454,8 @@ input{
 		top:-10px;
 		margin-bottom: -20px;
 	}
+}
+.key{
+	position:relative;
+	left:50px;
 }

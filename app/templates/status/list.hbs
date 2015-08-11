@@ -66,6 +66,11 @@
 <script>
     $(document).ready(function(){
 
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+
     $('.menu').toggle(1);
     $('.space').toggle(1);
 
