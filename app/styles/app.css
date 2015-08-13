@@ -389,7 +389,7 @@ button:active, .button:active {
 }
 .cancel{
 	text-align: right;
-	margin-top:10px;
+	margin-top:40px;
 }
 .pencil{
 	float:right;
@@ -454,8 +454,18 @@ input{
 		top:-10px;
 		margin-bottom: -20px;
 	}
+	.key{
+		position:static;
+		margin: 0 auto;
+	}
 }
 .key{
 	position:relative;
-	left:50px;
+	left:100px;
+}
+@media(max-width:409px){
+	body{
+	 	overflow-x:scroll;
+		min-width:423px;
+	}
 }

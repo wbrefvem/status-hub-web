@@ -51,3 +51,30 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+# What's Next
+
+Description: Internal website designed for management to keep an updated list of statuses.
+
+## Things to Do
+
+The next few steps, no particular order of priority.
+
+### Functionalities
+
+* Adding New
+* Deleting
+* Sorting
+* View
+
+### Other Tasks
+
+* Routing from status list page to status edit page when pencil clicked
+* Require all fields aside from Start/End Time
+* Create uniform format of Date and Time
+Include "Time Left:" on status list page
+	* Time left > 31 days = months
+	* 31 days > Time left > 1 day = days
+	* Time left < 1 day = hours
+	* Beneath status title
+	* Change styling based on time left
+	* Within 6 hours of end time – different styling
