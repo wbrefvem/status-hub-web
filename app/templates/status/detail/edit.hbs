@@ -15,28 +15,26 @@
         <div class="form-group">
             <label class="control-label col-md-3">Start Date</label>
             <div class="col-md-6">
-                {{input value=model.startDate viewName="startDate" class="form-control"}}
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-3">Start Time</label>
-            <div class="col-md-6">
-                {{input value=controllers.status/detail.startTime viewName=startTime class="form-control"}}
+                {{date-picker date=model.startDate name="startDate" action='updateDate'}}
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-3">End Date</label>
              <div class="col-md-6">
-                {{input value=model.endDate viewName="endDate" class="form-control"}}
+                {{date-picker date=model.endDate name="endDate" action='updateDate'}}
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">End Time</label>
+            <label class="control-label col-md-3">Publish to</label>
             <div class="col-md-6">
-                {{input value=model.endTime viewName="endTime" class="form-control"}}
+                <select multiple class="form-control">
+                    {{#each model.destinations as |item|}}
+                    <option>{{item.name}}</option>
+                    {{/each}}
+                </select>
             </div>
         </div>
         {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData' class="col-md-offset-3 col-md-3"}}
-        {{#link-to 'status.detail' model.id}}<button class="btn btn-danger col-md-3">Cancel</button>{{/link-to}}
+        {{#link-to 'status.detail' model.id}}<button class="btn btn-danger col-md-3">Revert Changes</button>{{/link-to}}
     </form>
 </section>

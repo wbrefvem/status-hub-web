@@ -3,8 +3,8 @@
         <ul class="well col-md-offset-3 col-md-6">
             <li><h3>{{model.title}}</h3></li>
             <li>{{model.description}}</li>
-            <li><a href={{model.url}}>{{model.url}}</a></li>
-            <li><small>{{formattedStartDate}} - {{formattedEndDate}}</small></li>
+            <Li>Published on: {{#each model.destinations as |item|}}{{item.name}}{{/each}}</li>
+            <li><small>{{model.startDate}} - {{model.endDate}}</small></li>
             <li>{{#link-to 'status.detail.edit' model.id}}edit{{/link-to}}</li>
         </ul>
     </section>

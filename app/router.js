@@ -13,6 +13,7 @@ Router.map(function() {
       this.route('delete');
     });
   });
+  this.route('application_loading');
 });
 
 export default Router;

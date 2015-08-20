@@ -30,7 +30,7 @@ module.exports = function(environment) {
     'default-src': "'none'",
     'script-src': "'self' http://www.google-analytics.com",
     'font-src': "'self' http://fonts.gstatic.com",
-    'connect-src': "'self' http://localhost:8008 http://mapststarcsrv3:8008",
+    'connect-src': "'self' http://localhost:8008 http://mapststarcsrv3:8008 https://status-hub-api.herokuapp.com",
     'img-src': "'self'",
     'style-src': "'self' http://fonts.googleapis.com",
     'media-src': "'self'",

@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default DS.RESTAdapter.extend({
   coalesceFindRequests: true,
   namespace: 'api/v1',
-  host: 'https://status-hub-api.herokuapp.com',
+  host: 'http://localhost:8008',
 
   pathForType: function(type) {
     var dasherized = Ember.String.dasherize(type);

@@ -1,7 +1,6 @@
-import Ember from "ember";
+import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  needs: ['status/detail'],
 
   isLoading: false,
   buttonText: 'Save',
@@ -12,6 +11,10 @@ export default Ember.Controller.extend({
       this.model.save().then(function() { 
         self.set('isLoading', false); 
       });
+    },
+
+    updateDate: function(newDate, fieldName) {
+      this.model.set(fieldName, newDate);
     }
   }
 });

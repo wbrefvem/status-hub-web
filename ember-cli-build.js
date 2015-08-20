@@ -20,6 +20,19 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
   app.import('bower_components/bootswatch-dist/js/bootstrap.js');
   app.import('bower_components/bootswatch-dist/css/bootstrap.css');
-  app.import('bower_components/momentjs/moment.js');
+  app.import('bower_components/moment/moment.js');
+  app.import('bower_components/jquery/dist/jquery.min.js');
+  app.import('bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js');
+  app.import('bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css');
+  app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/bootswatch-dist/fonts/glyphicons-halflings-regular.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/bootswatch-dist/fonts/glyphicons-halflings-regular.woff2', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/spinkit/css/spinkit.css');
   return app.toTree();
 };
