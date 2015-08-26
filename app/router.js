@@ -7,7 +7,6 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('status', function() {
-    this.route('list');
     this.route('detail', { path: ':status_id' }, function() {
       this.route('edit');
       this.route('delete');

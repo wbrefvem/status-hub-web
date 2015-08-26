@@ -1,40 +1,32 @@
 <section class="row">
-    <form class="form-horizontal">
+    <form class="col-md-6">
         <div class="form-group">
-            <label class="control-label col-md-3">Title</label>
-            <div class="col-md-6">
-                {{input type="text" value=model.title viewName="title" class="form-control"}}
-            </div>
+            <label class="control-label">Title</label>
+            {{input type="text" value=model.title viewName="title" class="form-control"}}
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">Description</label>
-             <div class="col-md-6">
-                {{input type="text" value=model.description viewName="description" class="form-control"}}
-            </div>
+            <label class="control-label">Description</label>
+            {{input type="text" value=model.description viewName="description" class="form-control"}}
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">Start Date</label>
-            <div class="col-md-6">
-                {{date-picker date=model.startDate name="startDate" action='updateDate'}}
-            </div>
+            <label class="control-label">Start Date</label>
+            {{date-picker date=model.startDate name="startDate" action='updateDate'}}
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">End Date</label>
-             <div class="col-md-6">
-                {{date-picker date=model.endDate name="endDate" action='updateDate'}}
-            </div>
+            <label class="control-label">End Date</label>
+            {{date-picker date=model.endDate name="endDate" action='updateDate'}}
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3">Publish to</label>
-            <div class="col-md-6">
-                <select multiple class="form-control">
-                    {{#each model.destinations as |item|}}
-                    <option>{{item.name}}</option>
-                    {{/each}}
-                </select>
-            </div>
+            <label class="control-label">Publish to</label>
+            <select multiple class="form-control">
+                {{#each model.destinations as |item|}}
+                <option>{{item.name}}</option>
+                {{/each}}
+            </select>
         </div>
-        {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData' class="col-md-offset-3 col-md-3"}}
-        {{#link-to 'status.detail' model.id}}<button class="btn btn-danger col-md-3">Revert Changes</button>{{/link-to}}
+        <div class="form-group">
+        {{spin-button id="forapplication" isLoading=isLoading buttonText=buttonText action='saveData'}}
+        {{#link-to 'status.detail' model.id}}<button class="btn btn-danger">Revert Changes</button>{{/link-to}}
+        </div>
     </form>
 </section>

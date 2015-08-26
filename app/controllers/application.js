@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     home: function() {
-      this.transitionToRoute('status.list');
+      this.transitionToRoute('status');
     }
   }
 });
