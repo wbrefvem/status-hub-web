@@ -1,13 +1,14 @@
 <div class="col-md-3">
-<article>
-    <section>
-        <ul class="list-group">
-            {{#each model as |status|}}
-                <li class="list-group-item pointed-at" {{!-- {{action 'detail' status}} --}}>{{#link-to 'status.detail.edit' status.id}}{{status.title}} #{{status.id}}{{/link-to}}</li>
-            {{/each}}
-        </ul>
-    </section>
-</article>
+    <article>
+        <section>
+            <ul class="list-group">
+                <li class="list-group-item">{{#link-to 'status.new'}}Add a new Status -->{{/link-to}}</li>
+                {{#each model as |status|}}
+                    <li class="list-group-item pointed-at">{{#link-to 'status.detail.edit' status.id}}{{status.title}} #{{status.id}}{{/link-to}}</li>
+                {{/each}}
+            </ul>
+        </section>
+    </article>
 </div>
 <div class="col-md-9">
 {{liquid-outlet}}

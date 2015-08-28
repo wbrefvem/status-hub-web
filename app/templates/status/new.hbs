@@ -1,0 +1,27 @@
+<section class="row">
+    <form class="col-md-6">
+        <div class="form-group">
+            <label class="control-label">Title</label>
+            {{input type="text" value=title class="form-control"}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Description</label>
+            {{input type="text" value=description class="form-control"}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Start Date</label>
+            {{date-picker date=startDate name="startDate" updateDate='updateDate' registerElement='registerElement'}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">End Date</label>
+            {{date-picker date=endDate name="endDate" updateDate='updateDate' registerElement='registerElement'}}
+        </div>
+        <div class="form-group">
+            <label class="control-label">Publish to</label>
+            {{select-option choices=destinationChoices action='triggerSelection'}}
+        </div>
+        <div class="form-group">
+            {{spin-button isLoading=isLoading buttonText=buttonText action='createStatus'}}
+        </div>
+    </form>
+</section>

@@ -15,7 +15,8 @@
     "moment": "~2.10.6",
     "bootswatch-dist": "3.3.5-united",
     "ember-bootstrap-datetimepicker": "~0.0.3",
-    "spinkit": "~1.2.1"
+    "spinkit": "~1.2.1",
+    "bootstrap": "~3.3.4"
   },
   "resolutions": {
     "ember": "1.13.8",

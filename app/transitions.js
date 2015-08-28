@@ -5,8 +5,7 @@ export default function(){
     this.fromRoute('status.detail.index'),
     this.toRoute('status.detail.edit'),
     this.use('custom-to-down'),
-    this.reverse('custom-to-up'),
-    this.debug()
+    this.reverse('custom-to-up')
   );
   this.transition(
     this.fromRoute('status.index'),

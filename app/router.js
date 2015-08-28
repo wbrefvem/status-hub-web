@@ -11,6 +11,7 @@ Router.map(function() {
       this.route('edit');
       this.route('delete');
     });
+    this.route('new');
   });
   this.route('application_loading');
 });

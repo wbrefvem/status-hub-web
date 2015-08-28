@@ -32,7 +32,7 @@ module.exports = function(environment) {
     'font-src': "'self' http://fonts.gstatic.com",
     'connect-src': "'self' http://localhost:8008 http://mapststarcsrv3:8008 https://status-hub-api.herokuapp.com",
     'img-src': "'self'",
-    'style-src': "'self' http://fonts.googleapis.com",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
     'media-src': "'self'",
   };
 

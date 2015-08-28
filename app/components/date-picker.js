@@ -4,7 +4,7 @@ import $ from 'jquery';
 export default Ember.Component.extend({
   classNames: ['input-group', 'date'],
 
-  didInsertElement: function() {
+  boltDatePickerOntoEmber: function() {
     var $element = $(this.get('element'));
     var self = this;
 
@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     });
 
     $element.on('dp.change', function(e) {
-      self.sendAction('action', e.date.format('MM/DD/YYYY h:mm A'), self.name);
+      self.sendAction('updateDate', e.date.format('MM/DD/YYYY h:mm A'), self.name);
     });
 
     $element.datetimepicker({
@@ -26,7 +26,13 @@ export default Ember.Component.extend({
         horizontal: 'auto',
         vertical: 'bottom'
       },
-      defaultDate: this.date
     });
+    
+    $element.data('DateTimePicker').setDate(this.date);
+  },
+
+  didInsertElement: function() {
+    this.sendAction('registerElement', this);
+    this.boltDatePickerOntoEmber();
   }
 });
