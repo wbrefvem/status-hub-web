@@ -26,7 +26,9 @@ export default Ember.Component.extend({
         horizontal: 'auto',
         vertical: 'bottom'
       },
+      defaultDate: null
     });
+    console.log(this.date);
     
     $element.data('DateTimePicker').setDate(this.date);
   },

@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
     return this.store.findAll('destination');
   }.property(),
   destinations: null,
+  datePickers: null,
   actions: {
     createStatus: function() {
       var title = this.get('title');
@@ -32,6 +33,12 @@ export default Ember.Controller.extend({
       }
       destinations.push(this.store.find('destination', selection));
       this.set('destinations', destinations);
+    },
+    registerElement: function(element) {
+      if (this.datePickers === null) {
+        this.datePickers = [];
+      }
+      this.datePickers.push(element);
     }
   }
 });
